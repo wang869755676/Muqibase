@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\test\11-7\MyApplication\appLibs\src\main\shaders"/></dataSet><dataSet config="release"><source path="E:\test\11-7\MyApplication\appLibs\src\release\shaders"/></dataSet></merger>
