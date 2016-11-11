@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 21
+        minSdkVersion 13
+        targetSdkVersion 25
     }
 
     buildTypes {
@@ -18,15 +18,22 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:23.4.0'
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.android.support:appcompat-v7:25.0.0'
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/glide-3.6.1.jar')
     compile files('libs/hyphenatechat_3.2.0.jar')
     compile files('libs/org.apache.http.legacy.jar')
-     // 下拉刷新组件
+    // 下拉刷新组件
     compile 'com.jcodecraeer:xrecyclerview:1.2.7'
     // 轮播图
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+    // 加载网络图片
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    // 5.0 的新特性
+    compile 'com.android.support:design:25.0.0'
+
+    // 仿照ios的progress
+    compile 'com.bigkoo:svprogresshud:1.0.6'
 }
