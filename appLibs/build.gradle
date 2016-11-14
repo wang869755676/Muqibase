@@ -36,4 +36,7 @@ dependencies {
 
     // 仿照ios的progress
     compile 'com.bigkoo:svprogresshud:1.0.6'
+
+    // 基于okhttpcleint进行网络请求
+    compile 'com.zhy:okhttputils:2.6.2'
 }
