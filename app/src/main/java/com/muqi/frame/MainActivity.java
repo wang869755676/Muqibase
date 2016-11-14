@@ -1,5 +1,6 @@
 package com.muqi.frame;
 
+import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,12 @@ import com.ToxicBakery.viewpager.transforms.ABaseTransformer;
 import com.ToxicBakery.viewpager.transforms.AccordionTransformer;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.Request;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SizeReadyCallback;
+import com.bumptech.glide.request.target.Target;
 import com.hyphenate.chatuidemo.R;
 
 import java.lang.reflect.Field;
@@ -26,7 +33,66 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // conventeneBanner 广告轮播
         initBanner();
+        initGlide();
 
+    }
+
+    /**
+     *  处理图片的工具
+     */
+    private void initGlide() {
+        Glide.with(this).load("").into(new Target<GlideDrawable>(){
+
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onStop() {
+
+            }
+
+            @Override
+            public void onDestroy() {
+
+            }
+
+            @Override
+            public void onLoadStarted(Drawable drawable) {
+
+            }
+
+            @Override
+            public void onLoadFailed(Exception e, Drawable drawable) {
+
+            }
+
+            @Override
+            public void onResourceReady(GlideDrawable glideDrawable, GlideAnimation<? super GlideDrawable> glideAnimation) {
+
+            }
+
+            @Override
+            public void onLoadCleared(Drawable drawable) {
+
+            }
+
+            @Override
+            public void getSize(SizeReadyCallback sizeReadyCallback) {
+
+            }
+
+            @Override
+            public void setRequest(Request request) {
+
+            }
+
+            @Override
+            public Request getRequest() {
+                return null;
+            }
+        });
     }
 
     private void initBanner() {
