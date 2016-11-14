@@ -2,4 +2,11 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 底部弹出菜单相关 -->
+    <dimen name="bottom_dialog_margin">8dp</dimen>
+    <dimen name="bottom_dialog_height">45dp</dimen>
+    <dimen name="bottom_dialog_padding">22dp</dimen>
+    <dimen name="bottom_dialog_line_height">1px</dimen>
+
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 椤堕儴鍦嗚 鐧借壊鑳屾櫙 搴曢儴鐏拌壊杈规 闀挎柟浣�-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+
+            <corners
+                android:topLeftRadius="4dp"
+                android:topRightRadius="4dp" />
+
+            <stroke
+                android:width="@dimen/bottom_dialog_line_height"
+                android:color="#B0B0B0" />
+        </shape>
+    </item>
+    <item android:bottom="@dimen/bottom_dialog_line_height">
+        <shape>
+            <solid android:color="#FFFFFF" />
+
+            <corners
+                android:topLeftRadius="4dp"
+                android:topRightRadius="4dp" />
+        </shape>
+    </item>
+
+</layer-list>

@@ -3,4 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="at_your_in_group">%s @ you in group chat</string>
+    <string name="emojicon_test_name">Test</string>
+    <string name="congratulations_submission_success">恭喜,提交成功!</string>
+    <string name="progress">"进度 "</string>
+    <string name="sorry_the_network_exception">抱歉,网络异常!</string>
+    <string name="your_account_is_deleted">您的账号被删除</string>
 </resources>
