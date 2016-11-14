@@ -162,12 +162,12 @@ public class UserProfileManager {
 	public void asyncGetUserInfo(final String username,final EMValueCallBack<EaseUser> callback){
 		ParseManager.getInstance().asyncGetUserInfo(username, callback);
 	}
-	private void setCurrentUserNick(String nickname) {
+	public  void setCurrentUserNick(String nickname) {
 		getCurrentUserInfo().setNick(nickname);
 		PreferenceManager.getInstance().setCurrentUserNick(nickname);
 	}
 
-	private void setCurrentUserAvatar(String avatar) {
+	public void setCurrentUserAvatar(String avatar) {
 		getCurrentUserInfo().setAvatar(avatar);
 		PreferenceManager.getInstance().setCurrentUserAvatar(avatar);
 	}

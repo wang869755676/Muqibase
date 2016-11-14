@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 
 import com.ToxicBakery.viewpager.transforms.ABaseTransformer;
 import com.ToxicBakery.viewpager.transforms.AccordionTransformer;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         // conventeneBanner 广告轮播
         initBanner();
         initGlide();
+
 
     }
 

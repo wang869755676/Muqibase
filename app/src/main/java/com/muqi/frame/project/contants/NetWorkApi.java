@@ -23,7 +23,7 @@ public class NetWorkApi {
      */
     public final static String GET_HX_USERINFOS_API = "common/list_hxusers_info";
 
-    public final static String LOGIN_APP_API = "login/user_login";
+    public final static String LOGIN_APP_API = SERVER_IP+"login/user_login";
 
     public final static String REGISTER_APP_API = "login/user_registed";
 

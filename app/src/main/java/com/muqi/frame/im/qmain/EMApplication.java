@@ -15,10 +15,29 @@ package com.muqi.frame.im.qmain;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Environment;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.hyphenate.chatuidemo.EMHelper;
+
+import com.hyphenate.util.FileUtils;
 import com.umeng.analytics.MobclickAgent;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.log.LoggerInterceptor;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSession;
+
+import okhttp3.Cache;
+import okhttp3.CacheControl;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class EMApplication extends Application {
@@ -56,7 +75,28 @@ public class EMApplication extends Application {
 
 		//SMSSDK.initSDK(this, "17db278e7e3f0", "d2c72bf240eac33a4b166e04a879ed0a");
 		MobclickAgent.setScenarioType(applicationContext, MobclickAgent.EScenarioType.E_UM_ANALYTICS_OEM);
-
+           initOkHttp();
 	}
-	
+
+	private void initOkHttp() {
+
+		OkHttpClient okHttpClient = new OkHttpClient.Builder()
+				.connectTimeout(10000L, TimeUnit.MILLISECONDS)
+				.readTimeout(10000L, TimeUnit.MILLISECONDS)
+				.addInterceptor(new LoggerInterceptor("==="))
+				.hostnameVerifier(new HostnameVerifier()
+				{
+					@Override
+					public boolean verify(String hostname, SSLSession session)
+					{
+						return true;
+					}
+				})
+				.build();
+
+
+		OkHttpUtils.initClient(okHttpClient);
+	}
+
+
 }
