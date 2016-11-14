@@ -1,4 +1,4 @@
-package com.chrisbanes.scanphoto.scanpicture;
+package com.chrisbanes.scanphoto;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
