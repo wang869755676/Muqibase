@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <color name="colorPrimary">#3F51B5</color>-->
+    <color name="colorPrimary">#fe6813</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- loadToast -->
+    <color name="color_accent">#7c4dff</color>
+    <color name="color_success">#3CCD88</color>
+    <color name="color_error">#f44336</color>
+    <!-- loadToast -->
+
+
+    <!-- 页面背景颜色 -->
+    <color name="layout_bg_color">#ffffff</color>
+    <!-- 标头背景颜色 -->
+    <color name="title_bg_color">#fe6813</color>
+    <color name="menu_bg_color">#252525</color>
+    <color name="high_tv_color">#53CAC3</color>
+    <color name="dark_bg_color">#E9EFEF</color>
+    <color name="button_pressed_color">#999999</color>
+    <!-- 应用文字颜色值 -->
+    <color name="text_black">#333333</color>
+    <color name="text_title">#565a5c</color>
+    <color name="text_light_black">#676767</color>
+    <color name="text_more_light_black">#888888</color>
+    <color name="text_blue">#139cd2</color>
+    <color name="text_green">#139cd2</color>
+    <color name="text_grey">#dedede</color>
+    <color name="text_menu">#7074AF</color>
+    <color name="text_collection_default">#7e7e7e</color>
+    <color name="goods_detail_pager_text_grey">#818181</color>
+    <color name="text_collection_selected">#e32339</color>
+    <color name="text_red">#e54a1a</color>
+    <color name="yellow">#ffb502</color>
+
+    <!-- 底部弹出框 -->
+    <color name="teal_500">#e32439</color>
+    <color name="teal_600">#296FD0</color>
+    <color name="teal_700">#296FD0</color>
+    <color name="littlegrey">#F5F5F8</color>
+
+    <!-- steven000 start -->
+    <color name="preference_item_pressed">#e3e3e3</color>
+    <color name="preference_item_normal">#ffffff</color>
+    <color name="preference_item_logout_pressed">#cc2222</color>
+    <color name="preference_item_logout_normal">#f45843</color>
+    <color name="mine_default_bg">#eeeeee</color>
+    <color name="traval_manage_item_pressed">#888888</color>
+    <!-- steven000 end -->
+
+
+    <!-- item backgroud -->
+    <color name="item_pressed">#0F0F0F</color>
+    <color name="item_normal">#42494e</color>
+    <color name="float_transparent">#00000000</color>
+    <color name="sweet_dialog_bg_color">#FFFFFF</color>
+    <color name="button_text_color">#FFFFFF</color>
+    <color name="gray_btn_bg_color">#D0D0D0</color>
+    <color name="gray_btn_bg_pressed_color">#B6B6B6</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="blue_btn_bg_pressed_color">#96BFD2</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+    <color name="red_btn_bg_pressed_color">#CD5B55</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="success_stroke_color">#A5DC86</color>
+    <color name="trans_success_stroke_color">#33A5DC86</color>
+    <color name="warning_stroke_color">#F8BB86</color>
+    <color name="text_color">#575757</color>
+    <color name="material_blue_grey_80">#ff37474f</color>
+    <color name="material_blue_grey_90">#ff263238</color>
+    <color name="material_blue_grey_95">#ff21272b</color>
+    <color name="material_deep_teal_20">#ff80cbc4</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+    <color name="app_blue_color">#339cfc</color>
+    <color name="tree_time_color">#A67145</color>
+    <color name="tree_text_color">#A36D41</color>
+    <color name="tree_content_bg_color">#F3EDBC</color>
+    <color name="chart_text_color">#C9C9C9</color>
+    <color name="chart_title_color">#7D7D7D</color>
+    <color name="statis_text_color">#272727</color>
+    <color name="statis_text_item_color">#A0A0A0</color>
+    <color name="statis_hand">#fc950f</color>
+    <color name="statis_think">#7582d5</color>
+    <color name="statis_listener">#1ac1d9</color>
+    <color name="statis_review">#ea6398</color>
+    <color name="menu_window_bg">#80ffffff</color>
+    <color name="statis_reword_color">#8f8f8f</color>
+    <color name="shop_text">#818486</color>
+    <color name="shop_text_write">#FF7A19</color>
+    <color name="shop_bg_green">#10C978</color>
+    <color name="record_detial_bg">#f5f4f4</color>
+
+   <color name="ez_et_underline_black">#ccc</color>
+   <color name="ez_et_underline_blue">#ccc</color>
+   <color name="ez_et_underline_gay">#f1f1f1</color>
+
+ <!-- 日历定义的一些颜色 -->
+ <color name="normal_day">#2f2f2f</color>
+ <color name="selected_day_background">#C2185B</color>
+ <color name="selected_day_text">#FFFFFF</color>
+ <color name="invalid_day_background">#999999</color>
+ <color name="order_color">#ababab</color>
+
+ <!--seekBar的颜色-->
+ <color name="progressColor">#474747</color>
+
+ <!--搜索车辆selecter-->
+ <color name="search_car_item_selecter">#E4E4E4</color>
+<color name="search_car_item_normal">#FFFFFF</color>
+ <color name="white">#ffffff</color>
+</resources>
