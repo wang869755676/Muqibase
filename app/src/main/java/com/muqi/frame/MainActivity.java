@@ -18,7 +18,6 @@ import static com.applibs.R.id.convenientBanner;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private ConvenientBanner banner;
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
     @Override
