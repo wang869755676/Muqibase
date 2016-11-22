@@ -1,13 +1,20 @@
 package com.muqi.frame;
 
+import android.animation.Animator;
+import android.app.ActivityOptions;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.widget.Button;
 
 import com.ToxicBakery.viewpager.transforms.ABaseTransformer;
 import com.ToxicBakery.viewpager.transforms.AccordionTransformer;
+import com.ToxicBakery.viewpager.transforms.BackgroundToForegroundTransformer;
+import com.ToxicBakery.viewpager.transforms.CubeInTransformer;
+import com.ToxicBakery.viewpager.transforms.CubeOutTransformer;
+import com.ToxicBakery.viewpager.transforms.RotateUpTransformer;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bumptech.glide.Glide;
@@ -21,29 +28,62 @@ import com.hyphenate.chatuidemo.R;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-import static com.applibs.R.id.convenientBanner;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.button)
+    Button button;
+    @BindView(R.id.view)
+    View view;
     private ConvenientBanner banner;
     private ArrayList<Integer> localImages = new ArrayList<Integer>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         // conventeneBanner 广告轮播
         initBanner();
         initGlide();
+        initMaterAnimation();
 
 
     }
 
     /**
-     *  处理图片的工具
+     * 处理materdesigen 的一些动画
+     */
+    private void initMaterAnimation() {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                banner.setcurrentitem(1);
+/*
+  要求api最低为21 暂时不可用
+                Animator animator = ViewAnimationUtils.createCircularReveal(MainActivity.this.view, 0, 0, 0, (float) Math.hypot(MainActivity.this.view.getWidth(),MainActivity.this.view.getHeight()));
+                animator.setDuration(1000);
+                animator.start();
+*/
+
+            }
+        });
+       // ActivityOptions.
+
+    }
+
+    /**
+     * 处理图片的工具
      */
     private void initGlide() {
-        Glide.with(this).load("").into(new Target<GlideDrawable>(){
+        // 对得到的图片进行处理  可以结合第三方的库
+        // Glide.with(this).load("").transform()
+
+        // 监听glide进行下载监听
+        Glide.with(this).load("").into(new Target<GlideDrawable>() {
 
             @Override
             public void onStart() {
@@ -98,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initBanner() {
-        banner= (ConvenientBanner) findViewById(R.id.convenientBanner);
+        banner = (ConvenientBanner) findViewById(R.id.convenientBanner);
         loadTestDatas();
         //自定义你的Holder，实现更多复杂的界面，不一定是图片翻页，其他任何控件翻页亦可。
         banner.setPages(
@@ -115,13 +155,13 @@ public class MainActivity extends AppCompatActivity {
 
         //设置翻页的效果，不需要翻页效果可用不设
 
-      //    convenientBanner.setManualPageable(false);//设置不能手动影响
+        //    convenientBanner.setManualPageable(false);//设置不能手动影响
 
         //.setPageTransformer(Transformer.DefaultTransformer);    集成特效之后会有白屏现象，新版已经分离，如果要集成特效的例子可以看Demo的点击响应。
         try {
-            Class cls = Class.forName("com.ToxicBakery.viewpager.transforms." + AccordionTransformer.class.getSimpleName());
-            ABaseTransformer transforemer= (ABaseTransformer)cls.newInstance();
-            banner.getViewPager().setPageTransformer(true,transforemer);
+            Class cls = Class.forName("com.ToxicBakery.viewpager.transforms." + CubeOutTransformer.class.getSimpleName());
+            ABaseTransformer transforemer = (ABaseTransformer) cls.newInstance();
+            banner.getViewPager().setPageTransformer(true, transforemer);
 
            /* //部分3D特效需要调整滑动速度
             if(transforemerName.equals("StackTransformer")){
@@ -138,8 +178,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //banner.setOnPageChangeListener()
-       //  banner.getCurrentItem();
-       // banner.setcurrentitem();
+        //  banner.getCurrentItem();
+        // banner.setcurrentitem();
 
 
     }
@@ -175,12 +215,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        banner.startTurning(5000);
+       // banner.startTurning(5000);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        banner.stopTurning();
+       // banner.stopTurning();
     }
 }
