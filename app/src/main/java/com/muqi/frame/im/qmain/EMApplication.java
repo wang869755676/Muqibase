@@ -18,6 +18,7 @@ import android.content.Context;
 import android.os.Environment;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.hyphenate.chatuidemo.EMHelper;
 
 import com.hyphenate.util.FileUtils;
@@ -61,6 +62,7 @@ public class EMApplication extends Application {
         instance = this;
         EMHelper.getInstance().init(applicationContext);
 		Fresco.initialize(applicationContext);
+
         
 		// 应用程序入口处调用，避免手机内存过小，杀死后台进程后通过历史intent进入Activity造成SpeechUtility对象为null
 		// 如在Application中调用初始化，需要在Mainifest中注册该Applicaiton
@@ -92,6 +94,7 @@ public class EMApplication extends Application {
 						return true;
 					}
 				})
+				.cache(new Cache(applicationContext.getCacheDir(),1024))
 				.build();
 
 

@@ -1,8 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="selectableItemBackground">?android:attr/selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:attr/selectableItemBackgroundBorderless</item>
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/orange</item>
     </style>
 
 </resources>

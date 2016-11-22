@@ -54,7 +54,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name">
         <activity
-            android:name="com.muqi.frame.app.ui.login.LoginActivity"
+            android:name="com.muqi.frame.MainActivity2"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
