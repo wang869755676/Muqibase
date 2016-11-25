@@ -2,6 +2,7 @@ package com.muqi.frame;
 
 import android.animation.ArgbEvaluator;
 import android.content.res.ColorStateList;
+import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
@@ -10,6 +11,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +56,11 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
                 TextView textView = mTipList.get(position);
+                textView.setLineSpacing(20,2);
+                textView.setText("带有下划线的textView\n换行之后");
+               // textView.setText(Html.fromHtml("<u color='red'>带有下划线的textView </u>"));
+                textView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG );
+                textView.getPaint().setAntiAlias(true);
                 container.addView(textView);
                 return textView;
             }

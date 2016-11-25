@@ -163,9 +163,9 @@ public class MainActivity extends AppCompatActivity {
             ABaseTransformer transforemer = (ABaseTransformer) cls.newInstance();
             banner.getViewPager().setPageTransformer(true, transforemer);
 
-           /* //部分3D特效需要调整滑动速度
-            if(transforemerName.equals("StackTransformer")){
-                convenientBanner.setScrollDuration(1200);
+            //部分3D特效需要调整滑动速度
+           /* if(transforemerName.equals("StackTransformer")){
+                banner.setScrollDuration(1200);
             }*/
 
         } catch (ClassNotFoundException e) {
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-       // banner.startTurning(5000);
+       banner.startTurning(5000);
     }
 
     @Override
